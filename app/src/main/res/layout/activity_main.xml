@@ -1,0 +1,157 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/relativeLayoutmain"
+            android:layout_marginBottom="60dp"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/btnSimpleTabs"
+                android:layout_width="200dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/btn_simple_tabs"
+                android:textSize="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnReqItems"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:text="Request Items"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/btnSimpleTabs"
+                android:layout_toEndOf="@+id/btnSimpleTabs" />
+
+            <Button
+                android:id="@+id/btnGetWaiter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Get Waiter"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/btnSimpleTabs"
+                android:layout_toEndOf="@+id/btnSimpleTabs"
+                android:layout_above="@+id/btnReqItems" />
+        </RelativeLayout>
+
+        <Spinner
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:layout_above="@+id/relativeLayoutmain"
+            android:layout_alignRight="@+id/btncreateTable"
+            android:layout_alignEnd="@+id/btncreateTable" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Table"
+            android:id="@+id/textView"
+            android:layout_alignBottom="@+id/spinner"
+            android:layout_toLeftOf="@+id/spinner"
+            android:layout_toStartOf="@+id/spinner" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/edPass"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_marginTop="56dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/edID"
+            android:layout_alignStart="@+id/edID"
+            android:hint="Password"/>
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/edID"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_alignLeft="@+id/textView"
+            android:layout_alignStart="@+id/textView"
+            android:layout_marginTop="10dp"
+            android:hint="Waiter ID"/>
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Connect"
+            android:id="@+id/btnConnect"
+            android:layout_below="@+id/edPass"
+            android:layout_alignRight="@+id/edPass"
+            android:layout_alignEnd="@+id/edPass"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CREATE TABLE"
+            android:id="@+id/btncreateTable"
+            android:layout_above="@+id/spinner"
+            android:layout_marginLeft="120dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/txtCode"
+            android:layout_above="@+id/relativeLayoutmain"
+            android:layout_toRightOf="@+id/spinner"
+            android:layout_toEndOf="@+id/spinner" />
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Tasks"
+            android:id="@+id/btnTasks"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

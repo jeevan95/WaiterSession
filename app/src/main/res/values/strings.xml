@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Waiter</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="one">Menu</string>
+    <string name="two">Order</string>
+    <string name="title_activity_simple_tabs">Browser Menu and Order</string>
+    <string name="connect">Connect</string>
+    <string name="btn_simple_tabs">Browser Menu and Order</string>
+
+    <string name="hello_world">Welcome!</string>
+
+
+</resources>
